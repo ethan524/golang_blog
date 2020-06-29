@@ -28,7 +28,7 @@
                     </el-form>
                 </div>
                 <div class="comment-list">
-                    <div class="title_"><span>766</span>条评论</div>
+                    <div class="title_"><span>7669</span>条评论</div>
                     <div class="comment-box">
                         <div class="lines">
                             <div class="origin_msg">
