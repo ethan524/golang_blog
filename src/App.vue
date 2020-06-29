@@ -1,32 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="app">
     <router-view/>
+    <el-backtop target=".app" ><i class="el-icon-caret-top"></i></el-backtop>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'app',
+}
+</script>
+
+<style>
+html,body,#app{
+  width:100%;
+  margin:0;
+  padding:0;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  background-color: #f5f5f5;
+}
+#app{
+  padding:0;
+  margin:0;
+}
+ul,li{ padding:0;margin:0;list-style:none}
+.app{
+  height: 100vh;
+  overflow-x:hidden;
+}
+a{
+  color:black;
+  text-decoration: none;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
