@@ -5,7 +5,7 @@
         <el-col :span="14" :push="5">
           <div class="header-menu">
               <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-                <el-menu-item class="blogName">小禹</el-menu-item>
+                <el-menu-item class="blogName"><a href="/index" class="siteName">小禹</a></el-menu-item>
                 <el-menu-item index="2" >首页</el-menu-item>
                 <el-menu-item >
                   <el-input v-model="keyword" placeholder="请输入内容" suffix-icon="el-icon-search"></el-input>
@@ -16,7 +16,7 @@
           <div class="user-box">
             <ul v-if="isLoginShow">
               <li><a href="#">注册</a> </li>
-              <li><a href="#">登陆</a> </li>
+              <li><a href="/login">登陆</a> </li>
             </ul>
             <ul v-if="isUserShow">
               <li>
@@ -62,8 +62,8 @@ export default {
     return {
       activeIndex:'2',
       keyword:"",
-      isLoginShow:false,
-      isUserShow:true,
+      isLoginShow:true,
+      isUserShow:false,
       squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
     }
   },
@@ -75,6 +75,14 @@ export default {
     font-size:20px;
     font-weight: bolder;
   }
+  .siteName{
+    color:black;
+    display: inline-block;
+    margin-top:-8px;
+  }
+  .siteName:link,.siteName:hover,.siteName:active,.siteName:visited{ color:black}
+
+
   .header-box{
     height:50px;
     width: 100%;

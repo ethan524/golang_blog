@@ -44,6 +44,7 @@
                     <li class="userinfos-li"><span class="span-title">职 业</span> - <span class="span-intro">PHP、Golang工程师</span></li>
                     <li class="userinfos-li"><span class="span-title">生 活</span> - <span class="span-intro">北京</span></li>
                     <li class="userinfos-li"><span class="span-title">邮 箱</span> - <span class="span-intro">ethan524@163.com</span></li>
+                    <li class="userinfos-li"><span class="span-title">简 介</span> - <span class="span-intro">爱撸铁的程序猿</span></li>
                 </ul>
             </div>
             <div class="recommend">
