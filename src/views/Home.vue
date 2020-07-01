@@ -4,9 +4,13 @@
       <el-row>
         <el-col :span="14" :push="5">
           <div class="header-menu">
-              <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+              <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" >
                 <el-menu-item class="blogName"><a href="/index" class="siteName">小禹</a></el-menu-item>
-                <el-menu-item index="2" >首页</el-menu-item>
+                <el-menu-item index="2" class=""><router-link v-bind:to="{path:'/index', query:{type:2}}">首页</router-link></el-menu-item>
+                <el-menu-item index="3" class=""><router-link v-bind:to="{path:'/index', query:{type:3}}">前端</router-link></el-menu-item>
+                <el-menu-item index="4" class=""><router-link v-bind:to="{path:'/index', query:{type:4}}">后端</router-link></el-menu-item>
+                <el-menu-item index="5" class=""><router-link v-bind:to="{path:'/index', query:{type:5}}">数据库</router-link></el-menu-item>
+                <el-menu-item index="6" class=""><router-link v-bind:to="{path:'/index', query:{type:6}}">开发文档</router-link></el-menu-item>
                 <el-menu-item >
                   <el-input v-model="keyword" placeholder="请输入内容" suffix-icon="el-icon-search"></el-input>
                 </el-menu-item>
@@ -62,11 +66,14 @@ export default {
     return {
       activeIndex:'2',
       keyword:"",
-      isLoginShow:true,
-      isUserShow:false,
+      isLoginShow:false,
+      isUserShow:true,
       squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
     }
   },
+  mounted(){
+
+  }
 }
 </script>
 
@@ -81,7 +88,12 @@ export default {
     margin-top:-8px;
   }
   .siteName:link,.siteName:hover,.siteName:active,.siteName:visited{ color:black}
-
+  .el-menu--horizontal>.el-menu-item.is-active{
+    border-bottom:2px solid #0d9493;
+  }
+  .el-menu--horizontal>.el-menu-item:hover{
+    border-bottom:2px solid #0d9493 !important;
+  }
 
   .header-box{
     height:50px;
@@ -156,6 +168,9 @@ export default {
   }
   .el-dropdown-menu{
     top:34px !important;
+  }
+  .el-menu-item{
+    border-bottom: 2px solid #0d9493;;
   }
 
 </style>

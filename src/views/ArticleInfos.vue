@@ -217,7 +217,19 @@ export default {
                     return false;
                 }
             });
+        },
+        handleScroll () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            console.log(scrollTop)
+            var offsetTop = document.querySelector('#contentTitle').offsetTop
+            console.log(offsetTop)
         }
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll, true)
+    },
+    mounted(){
+        window.addEventListener('scroll', this.handleScroll, true)
     }
 }
 </script>

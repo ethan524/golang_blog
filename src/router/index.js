@@ -21,7 +21,7 @@ Vue.use(VueRouter)
       component: Home,
       children:[
         {
-          path:'/index',
+          path:'/index/',
           name:'Index',
           component:Index,
         },

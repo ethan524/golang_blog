@@ -1,12 +1,6 @@
 <template>
     <div class="main">
         <div class="leftContent">
-            <div class="contentTypeTab">
-                <ul>
-                    <li class="liActive">推荐</li>
-                    <li>关注</li>
-                </ul>
-            </div>
             <div class="contentLines">
                 <div class="lines" v-for="(item, index) in lines" :key="index">
                     <div class="lineLeft">
@@ -74,7 +68,7 @@ export default {
         return{
             lines:[1,2,3,4,5,6,7,8,9,10]
         }
-    }
+    },
 }
 </script>
 
@@ -87,7 +81,7 @@ export default {
         float: left;
         width: 65%;
         margin-right: 1%;
-        background-color: white;
+        // background-color: white;
         overflow: hidden;
     }
     .contentTypeTab{
@@ -110,11 +104,20 @@ export default {
         color:rgb(#1575f9)
     }
     .lines{
-        width: 100%;
+        width: 94%;
         max-height: 200px;
         min-height: 120px;
         padding:20px 5px 40px 20px;
-        border-bottom: 1px solid rgb(229,229,229);
+        border: 1px solid rgb(229,229,229);
+        border-radius: 10px;
+        background-color: white;
+        margin:10px 0px;
+        margin-left: 10px;
+    }
+    .lines:hover{
+        -webkit-box-shadow: #666 0px 0px 10px; 
+        -moz-box-shadow: #666 0px 0px 10px; 
+        box-shadow: #666 0px 0px 10px; 
     }
     .content-title a{
         text-decoration: none;
@@ -123,7 +126,7 @@ export default {
         font-weight: 400;
     }
     .content-title a:hover{
-        color:#3f649c;
+        color:#0d9493;
     }
     .lineLeft{
         width: 66%;
